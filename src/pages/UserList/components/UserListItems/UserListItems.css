@@ -1,0 +1,48 @@
+.UserListItems_Ul {
+    width: 100%;
+}
+.UserListItems_Li {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--us-li-border-bg);
+}
+.UserListItemsLi_Name,
+.UserListItemsLi_Birthday,
+.UserListItemsLi_Email,
+.UserListItemsLi_Phone,
+.UserListItemsLi_Country,
+.UserListItemsLi_City {
+    flex: 1;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    user-select: text;
+}
+.UserListItemsLi_Name {
+    display: flex;
+    align-items: center;
+}
+.UserListItems_Avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--us-li-avatar-bg);
+    color: var(--us-li-avatar-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.UserListItemsLi_FirstLastName {
+    padding: 0 7.5px;
+    user-select: text;
+}
+.UserListItemsLi_Birthday,
+.UserListItemsLi_Phone {
+    flex: 0.75;
+}
+.UserListItemsLi_Email {
+    flex: 1.35;
+}

@@ -1,0 +1,32 @@
+.searchListContainer,
+.searchListContainer_None {
+    width: 500px;
+    margin: 0 auto;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: fit-content;
+    border-radius: 5px;
+    z-index: 1;
+}
+.searchListContainer_None {
+    display: none;
+}
+.searchListUl {
+    width: 90%;
+    padding: 15px 0;
+    background-color: var(--bg-color);
+    backdrop-filter: blur(5px);
+}
+.searchListElement {
+    list-style: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+.searchListElement:hover {
+    background-color: var(--result-li-hover);
+}

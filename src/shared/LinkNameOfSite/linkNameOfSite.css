@@ -1,0 +1,7 @@
+.nameOfSite {
+    height: fit-content;
+    font-size: 1.65rem;
+    text-decoration: none;
+    color: var(--text-color);
+    letter-spacing: 0.25rem;
+}

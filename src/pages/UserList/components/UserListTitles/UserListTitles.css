@@ -1,0 +1,48 @@
+.UserListTitles {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--us-li-border-bg);
+}
+.UserListTitles_Name,
+.UserListTitles_Birthday,
+.UserListTitles_Email,
+.UserListTitles_Phone,
+.UserListTitles_Country,
+.UserListTitles_City {
+    flex: 1;
+    color: var(--text-color);
+    font-size: 1.15rem;
+    padding: 0 0 0 2.5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.UserListTitles_Name:hover,
+.UserListTitles_Birthday:hover,
+.UserListTitles_Email:hover,
+.UserListTitles_Phone:hover,
+.UserListTitles_Country:hover,
+.UserListTitles_City:hover {
+    background-color: var(--us-li-titles-hover);
+    border-radius: 5px;
+}
+.UserListTitles_Birthday,
+.UserListTitles_Phone {
+    flex: 0.75;
+}
+.UserListTitles_Email {
+    flex: 1.35;
+}   
+#active::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid var(--us-li-titles-triangle);
+    margin: 2.5% 0 0 5%;
+}

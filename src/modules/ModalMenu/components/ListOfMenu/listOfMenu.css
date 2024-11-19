@@ -1,0 +1,59 @@
+.listOfMenuContainer {
+    width: 95%;
+    margin: 0 auto 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    background-color: var(--modal-menu-container-bg);
+}
+.titleListOfProjects {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 2.5px 0;
+    color: var(--text-color);
+}
+.sectionsContainer_Show {
+    width: 100%;
+    color: var(--text-color);
+}
+.sectionsContainer_Hide {
+    display: none;
+}
+.itemListOfMenu {
+    margin: 3px 0;
+}
+.titleOfSection {
+    font-size: 1.25rem;
+    text-align: center;
+    cursor: pointer;
+}
+.titleOfSection:hover {
+    background-color: var(--modal-menu-list-hover-bg);
+}
+.ulListOfProjects_Show,
+.ulListOfProjects_Hide {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ulListOfProjects_Hide {
+    display: none;
+}
+.itemListOfSection {
+    width: 100%;
+    margin: 5px 0;
+    text-align: center;
+    border-radius: 5px;
+    list-style: none;
+    font-size: 1.15rem;
+    font-style: italic;
+    cursor: pointer;
+    transition: 0s;
+}
+.itemListOfSection:hover {
+    background-color: var(--modal-menu-list-hover-bg);
+}

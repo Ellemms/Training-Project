@@ -1,0 +1,28 @@
+.UserListHeader {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--us-li-border-bg);
+}
+.UserListHeader_Title {
+    color: var(--text-color);
+    font-size: 1.65rem;
+}
+.UserListHeader_Search {
+    width: 250px;
+    height: 30px;
+    border-radius: 50px 0 0 50px;
+    padding: 0 15px;
+    font-size: 0.9rem;
+    background-color: var(--us-li-search-bg);
+    color: var(--text-color);
+}
+.UserListHeader_Search::placeholder {
+    color: var(--us-li-search-place-color);
+}
+.UserListHeader_Search:focus {
+    background-color: var(--us-li-search-focus);
+    color: var(--us-li-search-color);
+}

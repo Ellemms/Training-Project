@@ -1,0 +1,35 @@
+.modalMenuContainer_Show,
+.modalMenuContainer_Hide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--layer-bg);
+    z-index: -1;
+    opacity: 0;
+}
+.modalMenuContainer_Show {
+    animation: layerBgAnimation_Show .3s forwards;    
+}
+@keyframes layerBgAnimation_Show {
+    0% {
+        z-index: 1;
+        opacity: 0;
+    }
+    100% {
+        z-index: 1;
+        opacity: 1;
+    }
+}
+.modalMenuContainer_Hide {
+    animation: layerBgAnimation_Hide .3s forwards;
+}
+@keyframes layerBgAnimation_Hide {
+    0% {
+        z-index: 1;
+        opacity: 1;
+    }
+    100% {
+        z-index: -1;
+        opacity: 0;
+    }
+}

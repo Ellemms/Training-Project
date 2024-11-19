@@ -1,0 +1,60 @@
+.settingsContainer {
+    width: 95%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    background-color: var(--settings-container-bg);
+}
+.settingsTitle {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 2.5px 0;
+    color: var(--text-color);
+}
+.listSettingsContainer {
+    width: 100%;
+}
+.listSettingsContainer_Hide {
+    display: none;
+}
+.settingsColorContainer {
+    width: 100%;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+.buttonLightTheme,
+.buttonDarkTheme {
+    width: 50%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #1e1e1e;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    z-index: 1;
+}
+.buttonLightTheme {
+    color: #fff;
+}
+.buttonDarkTheme {
+    color: var(--text-color);
+}
+.sliderSpan {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: var(--settings-slider-translate);
+    background-color: var(--settings-slider-bg);
+}

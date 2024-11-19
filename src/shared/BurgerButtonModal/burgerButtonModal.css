@@ -1,0 +1,16 @@
+.burgerButtonModal {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    left: 15px;
+    cursor: pointer;
+}
+.burgerButtonModal span {
+    width: 20px;
+    height: 3px;
+    background-color: var(--burger-span-bg-color);
+}

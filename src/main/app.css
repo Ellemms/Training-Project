@@ -1,0 +1,30 @@
+@font-face {
+    font-family: Exo_2;
+    src: url('../../public/fonts/Exo_2/Exo2-VariableFont_wght.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: 0;
+    user-select: none;
+    transition: 0.3s;
+    font-family: Exo_2, sans-serif;
+    font-style: italic;
+}
+body {
+    overflow: hidden;
+}
+.mainContainer {
+    height: 100vh;
+    background-image: url('/public/images/80611643_p0.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-color);
+}

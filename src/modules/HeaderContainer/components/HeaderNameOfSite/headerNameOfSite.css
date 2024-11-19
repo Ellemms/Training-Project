@@ -1,0 +1,9 @@
+.headerNameOfSiteContainer {
+     width: 285px;
+     height: 65px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: absolute;
+     left: 0;
+}

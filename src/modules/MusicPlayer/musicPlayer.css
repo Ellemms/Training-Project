@@ -1,0 +1,106 @@
+.musicPlayerContainer {
+    width: 100%;
+    min-height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    background-Color: var(--music-player-bg);
+    box-shadow: 0 4px 20px var(--music-player-shadow);
+}
+.audioTitleContainer {
+    width: 75%;
+    height: 100%;
+    font-size: 1rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    position: relative;
+    z-index: 1;
+    color: var(--text-color);
+}
+.audioTitle,
+.audioTitleAnimation {
+    width: fit-content;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 1;
+}
+.audioTitleAnimation {
+    animation: titleAnimation 10s infinite linear;
+}
+@keyframes titleAnimation {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+.equalizerContainer {
+    width: 75%;
+    min-height: 30px;
+    margin: 0 0 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: last baseline;
+}
+.bar {
+    background-color: var(--music-player-bar-bg);
+    width: 3px;
+}
+.audioPlayerButtons {
+    width: 100%;
+    margin: 0 0 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.previousTrackBtn,
+.playPauseBtn,
+.nextTrackBtn {
+    color: var(--text-color);
+}
+.previousTrackBtn {
+    padding: 5px 10px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(33, 33, 33, 0.3));
+    border-radius: 25px;
+    font-size: 1.15rem;
+    cursor: pointer;
+}
+.previousTrackBtn:hover {
+    background: linear-gradient(45deg, rgba(33, 33, 33, 0.3), rgba(255, 255, 255, 0.3));
+    transform: scale(1.05);
+}
+.previousTrackBtn:active {
+    transform: scale(0.95);
+}
+.playPauseBtn {
+    width: 35%;
+    padding: 5px 10px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(33, 33, 33, 0.3), rgba(255, 255, 255, 0.3));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.15rem;
+    cursor: pointer;
+}
+.playPauseBtn:hover {
+    background: linear-gradient(90deg, rgba(33, 33, 33, 0.3), rgba(255, 255, 255, 0.3), rgba(33, 33, 33, 0.3));
+    transform: scale(1.05);
+}
+.playPauseBtn:active {
+    transform: scale(0.95);
+}
+.nextTrackBtn {
+    background: linear-gradient(135deg, rgba(33, 33, 33, 0.3), rgba(255, 255, 255, 0.3));
+    border-radius: 25px;
+    padding: 5px 10px;
+    font-size: 1.15rem;
+    cursor: pointer;
+}
+.nextTrackBtn:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(33, 33, 33, 0.3));
+    transform: scale(1.05);
+}
+.nextTrackBtn:active {
+    transform: scale(0.95);
+}
