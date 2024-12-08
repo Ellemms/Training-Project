@@ -11,7 +11,7 @@ const UserListComponent = () => {
     /////Context
     const contextValue = useInitContext()
 
-    useDownloadData(contextValue.UserListClassExR, contextValue.UserListTitlesExR)
+    useDownloadData(contextValue.UserListDataExR, contextValue.UserListTitlesExR)
 
     return (
         <div className="UserListContent">

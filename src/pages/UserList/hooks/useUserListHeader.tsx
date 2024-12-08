@@ -22,7 +22,7 @@ const useUserListHeader = () => {
    }
    
    useEffect(() => {
-       dispatch({type: 'setUserListArray', payload: contextValue.UserListClassExR.ChangePage(UserListSearchValue, ActivePage, QuantityOfElements)})
+       dispatch({type: 'setUserListArray', payload: contextValue.UserListDataExR.changePage(UserListSearchValue, ActivePage, QuantityOfElements)})
        dispatch({type: 'resetNumberActivePage'})
    }, [UserListSearchValue])
 

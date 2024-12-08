@@ -11,7 +11,7 @@ const UseListTitles = () => {
    /////States
    const UserListTitleArray = useSelector((store: RootState) => store.userList.UserListTitlesArray)
    /////Hooks
-   const SortUserList = useSortUserList(contextValue.UserListClassExR, contextValue.UserListTitlesExR)
+   const SortUserList = useSortUserList(contextValue.UserListDataExR, contextValue.UserListTitlesExR)
    
    return (
       <div className="UserListTitles">

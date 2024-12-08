@@ -14,9 +14,9 @@ const UserListFooter = () => {
             dispatch,
             QuantityOfElements,
             ActivePage,
-            TotalNumberPages } = useUserListFooter(contextValue.UserListClassExR, contextValue.RefUserListScroll)
+            TotalNumberPages } = useUserListFooter(contextValue.UserListDataExR, contextValue.RefUserListScroll)
 
-    const { getDataNew } = useGetDataNew(contextValue.UserListClassExR, contextValue.UserListTitlesExR)
+    const { getDataNew } = useGetDataNew(contextValue.UserListDataExR, contextValue.UserListTitlesExR)
 
     return (
         <div className="UserListFooter_Container">

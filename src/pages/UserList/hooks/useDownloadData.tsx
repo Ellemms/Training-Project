@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../../store/store'
-import UserListClass from '../classes/UserList_Class'
 import { useEffect } from 'react'
 import UserListTitles_Class from '../classes/UserListTitles_Class'
 import useGetDataNew from './useGetDataNew'
+import { UserListData } from '../../../features/UserListData'
 
-const useDownloadData = (UserListClassExR: UserListClass, UserListTitlesExR: UserListTitles_Class) => {
+const useDownloadData = (UserListDataExR: UserListData, UserListTitlesExR: UserListTitles_Class) => {
 
     /////States
     const UserListSearchValue = useSelector((store: RootState) => store.userList.UserListSearchValue)
@@ -15,14 +15,14 @@ const useDownloadData = (UserListClassExR: UserListClass, UserListTitlesExR: Use
     /////Dispatch
     const dispatch = useDispatch()
 
-    const { getDataNew } = useGetDataNew(UserListClassExR, UserListTitlesExR)
+    const { getDataNew } = useGetDataNew(UserListDataExR, UserListTitlesExR)
 
     useEffect(() => {
         const data = localStorage.getItem('userListArray')
         data
-            ? (UserListClassExR.setStaticArray(JSON.parse(data)),
-               UserListClassExR.sortArray(),
-               dispatch({type: 'setUserListArray', payload: UserListClassExR.ChangePage(UserListSearchValue, ActivePage, QuantityOfElements)}),
+            ? (UserListDataExR.SetStaticArray = JSON.parse(data),
+               UserListDataExR.sortArray(),
+               dispatch({type: 'setUserListArray', payload: UserListDataExR.changePage(UserListSearchValue, ActivePage, QuantityOfElements)}),
                
                UserListTitlesExR.ActivateTitle(),
                dispatch({type: 'setUserListTitlesArray', payload: UserListTitlesExR.getTitlesArray}))

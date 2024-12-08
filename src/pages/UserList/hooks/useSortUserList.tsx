@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../../../store/store"
-import UserListClass from "../classes/UserList_Class"
 import UserListTitles_Class from "../classes/UserListTitles_Class"
+import { UserListData } from "../../../features/UserListData"
 
 
 
-const useSortUserList = (UserListClassExR: UserListClass, UserListTitlesExR: UserListTitles_Class) => {
+const useSortUserList = (UserListDataExR: UserListData, UserListTitlesExR: UserListTitles_Class) => {
 
     const UserListSearchValue = useSelector((store: RootState) => store.userList.UserListSearchValue)
     const ActivePage = useSelector((store: RootState) => store.userList.ActivePage)
@@ -14,8 +14,8 @@ const useSortUserList = (UserListClassExR: UserListClass, UserListTitlesExR: Use
     const dispatch = useDispatch()
 
     const SortUserList = (e: React.MouseEvent<HTMLParagraphElement>) => {
-        UserListClassExR.sortArray(e.currentTarget.textContent?.toString())
-        dispatch({type: 'setUserListArray', payload: UserListClassExR.ChangePage(UserListSearchValue, ActivePage, QuantityOfElements)})
+        UserListDataExR.sortArray(e.currentTarget.textContent?.toString())
+        dispatch({type: 'setUserListArray', payload: UserListDataExR.changePage(UserListSearchValue, ActivePage, QuantityOfElements)})
         UserListTitlesExR.ActivateTitle(e.currentTarget?.className)
         dispatch({type: 'setUserListTitlesArray', payload: UserListTitlesExR.getTitlesArray})
     }

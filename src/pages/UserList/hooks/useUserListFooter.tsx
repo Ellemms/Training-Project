@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../../../store/store"
 import React, { useEffect } from "react"
-import UserListClass from "../classes/UserList_Class"
+import { UserListData } from "../../../features/UserListData"
 
-const useUserListFooter = (UserListClassExR: UserListClass, RefUserListScroll: React.ForwardedRef<HTMLDivElement | null>) => {
+const useUserListFooter = (UserListDataExR: UserListData, RefUserListScroll: React.ForwardedRef<HTMLDivElement | null>) => {
 
     /////States
     const {
@@ -29,7 +29,7 @@ const useUserListFooter = (UserListClassExR: UserListClass, RefUserListScroll: R
     }, [ActivePage])
     
     useEffect(() => {
-        const totalNumberPages = Math.ceil(UserListClassExR.GetNewArray.length / QuantityOfElements);
+        const totalNumberPages = Math.ceil(UserListDataExR.GetStaticArray.length / QuantityOfElements);
         dispatch({type: 'setTotalNumberPages', payload: totalNumberPages >= 1 ? totalNumberPages : 1});
         (RefUserListScroll as React.MutableRefObject<HTMLDivElement | null>).current?.scrollTo({ top: 0, behavior: 'smooth' });
     }, [UserListArray])
@@ -40,7 +40,7 @@ const useUserListFooter = (UserListClassExR: UserListClass, RefUserListScroll: R
         dispatch({type: 'setUserListSelect_Visible'})
     }
     const setUserListArray = (UserListSearchValue: string, ActivePage: number, QuantityOfElements: number) => {
-        dispatch({type: 'setUserListArray', payload: UserListClassExR.ChangePage(UserListSearchValue, ActivePage, QuantityOfElements)});
+        dispatch({type: 'setUserListArray', payload: UserListDataExR.changePage(UserListSearchValue, ActivePage, QuantityOfElements)});
     };
     
     /////Styles&Classes
