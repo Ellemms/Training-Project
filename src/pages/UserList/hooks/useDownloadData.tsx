@@ -1,9 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../../store/store'
-import { useEffect } from 'react'
 import UserListTitles_Class from '../classes/UserListTitles_Class'
-import useGetDataNew from './useGetDataNew'
-import { UserListData } from '../../../features/UserListData'
+import { UserListData } from '../classes/UserListData'
 
 const useDownloadData = (UserListDataExR: UserListData, UserListTitlesExR: UserListTitles_Class) => {
 
@@ -15,21 +13,23 @@ const useDownloadData = (UserListDataExR: UserListData, UserListTitlesExR: UserL
     /////Dispatch
     const dispatch = useDispatch()
 
-    const { getDataNew } = useGetDataNew(UserListDataExR, UserListTitlesExR)
-
-    useEffect(() => {
+    /////Axios
+    const downloadData = async (arg: string = 'newData') => {
         const data = localStorage.getItem('userListArray')
-        data
-            ? (UserListDataExR.SetStaticArray = JSON.parse(data),
-               UserListDataExR.sortArray(),
-               dispatch({type: 'setUserListArray', payload: UserListDataExR.changePage(UserListSearchValue, ActivePage, QuantityOfElements)}),
-               
-               UserListTitlesExR.ActivateTitle(),
-               dispatch({type: 'setUserListTitlesArray', payload: UserListTitlesExR.getTitlesArray}))
-            : getDataNew()
-    }, [])
 
-    return null
+        data && arg === 'localData' ? UserListDataExR.SetStaticArray = JSON.parse(data)
+                                    : arg === 'newData' ? (await UserListDataExR.getData(),
+                                                           localStorage.setItem('userListArray', JSON.stringify(UserListDataExR.GetStaticArray)))
+                                    : null
+
+        UserListDataExR.sortArray(),
+        dispatch({type: 'setUserListArray', payload: UserListDataExR.changePage(UserListSearchValue, ActivePage, QuantityOfElements)}),
+
+        UserListTitlesExR.ActivateTitle(),
+        dispatch({type: 'setUserListTitlesArray', payload: UserListTitlesExR.getTitlesArray})
+    }
+
+    return { downloadData }
 }
 
 export default useDownloadData

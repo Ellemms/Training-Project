@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../../../store/store"
 import React, { useEffect } from "react"
-import { UserListData } from "../../../features/UserListData"
+import { UserListData } from "../classes/UserListData"
 
 const useUserListFooter = (UserListDataExR: UserListData, RefUserListScroll: React.ForwardedRef<HTMLDivElement | null>) => {
 
@@ -29,7 +29,7 @@ const useUserListFooter = (UserListDataExR: UserListData, RefUserListScroll: Rea
     }, [ActivePage])
     
     useEffect(() => {
-        const totalNumberPages = Math.ceil(UserListDataExR.GetStaticArray.length / QuantityOfElements);
+        const totalNumberPages = Math.ceil(UserListDataExR.GetNewArray.length / QuantityOfElements);
         dispatch({type: 'setTotalNumberPages', payload: totalNumberPages >= 1 ? totalNumberPages : 1});
         (RefUserListScroll as React.MutableRefObject<HTMLDivElement | null>).current?.scrollTo({ top: 0, behavior: 'smooth' });
     }, [UserListArray])

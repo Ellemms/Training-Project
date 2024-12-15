@@ -5,13 +5,16 @@ import './UserList.css'
 import UserListFooter from "./components/UserListFooter/UserListFooter"
 import useDownloadData from './hooks/useDownloadData'
 import { useInitContext } from '../../context/ContextProvider'
+import { useEffect } from 'react'
 
 const UserListComponent = () => {
 
     /////Context
     const contextValue = useInitContext()
 
-    useDownloadData(contextValue.UserListDataExR, contextValue.UserListTitlesExR)
+    const { downloadData } = useDownloadData(contextValue.UserListDataExR, contextValue.UserListTitlesExR)
+    
+    useEffect(() => {downloadData('localData')}, [])
 
     return (
         <div className="UserListContent">

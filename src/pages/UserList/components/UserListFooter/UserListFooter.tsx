@@ -1,6 +1,6 @@
 import './UserListFooter.css'
 import useUserListFooter from '../../hooks/useUserListFooter'
-import useGetDataNew from '../../hooks/useGetDataNew'
+import useDownloadData from '../../hooks/useDownloadData'
 import { useInitContext } from '../../../../context/ContextProvider'
 
 const UserListFooter = () => {
@@ -16,7 +16,7 @@ const UserListFooter = () => {
             ActivePage,
             TotalNumberPages } = useUserListFooter(contextValue.UserListDataExR, contextValue.RefUserListScroll)
 
-    const { getDataNew } = useGetDataNew(contextValue.UserListDataExR, contextValue.UserListTitlesExR)
+    const { downloadData } = useDownloadData(contextValue.UserListDataExR, contextValue.UserListTitlesExR)
 
     return (
         <div className="UserListFooter_Container">
@@ -26,7 +26,7 @@ const UserListFooter = () => {
                 </ul>
                 <p className='UserListSelect_Quantity' onClick={() => dispatch({type: 'setUserListSelect_Visible'})}>{QuantityOfElements}</p>
             </div>
-            <button className='UserListRefreshData' onClick={() => getDataNew()}>Refresh data</button>
+            <button className='UserListRefreshData' onClick={() => downloadData('newData')}>Refresh data</button>
             <div className='UserList_numberPageContainer'>
                 <button className='UserList_btnPrevPage'
                         onClick={() => dispatch({type: 'prevNumberActivePage'})}>Prev page</button>

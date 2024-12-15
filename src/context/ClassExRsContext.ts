@@ -1,4 +1,4 @@
-import { UserListData } from "../features/UserListData";
+import { UserListData } from "../pages/UserList/classes/UserListData";
 import MenuList from "../modules/ModalMenu/classes/MenuListClass";
 import AudioPlayerClass from "../modules/MusicPlayer/classes/MusicPlayerClass";
 import UserListTitles_Class from "../pages/UserList/classes/UserListTitles_Class";
