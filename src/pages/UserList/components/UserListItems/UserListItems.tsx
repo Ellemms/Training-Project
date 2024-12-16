@@ -14,7 +14,7 @@ const UserListItems = () => {
                             <div className='UserListItemsLi_Name'>
                                 <span className='UserListItems_Avatar'>
                                         {el.name[0]}
-                                    </span>
+                                </span>
                                 <p className='UserListItemsLi_FirstLastName'>{el.name}</p>
                             </div>
                             <div className='UserListItemsLi_Birthday'>{el.birthday}</div>
