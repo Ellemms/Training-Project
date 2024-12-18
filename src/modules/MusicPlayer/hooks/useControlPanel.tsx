@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
-import { RootState } from "../../../store/store"
+import { RootState } from "@src/store/store"
 import AudioInterface from "../interfaces/MusicPlayerInterface"
-import { useInitContext } from "../../../context/ContextProvider"
+import { useInitContext } from "@src/context/ContextProvider"
 
 const useControlPanel = () => {
 

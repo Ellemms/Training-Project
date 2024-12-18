@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
-import { RootState } from "../../../store/store"
-import { useInitContext } from "../../../context/ContextProvider"
+import { RootState } from "@src/store/store"
+import { useInitContext } from "@src/context/ContextProvider"
 
 const useListOfMenu = () => {
 

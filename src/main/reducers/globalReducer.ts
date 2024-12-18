@@ -1,4 +1,3 @@
-
 const initialState = {
     colorStyle: localStorage.getItem('colorStyle') || 'dark',
     nameActivePage: localStorage.getItem('nameActivePage') || '',

@@ -1,8 +1,8 @@
 import { useEffect } from "react"
-import { useInitContext } from "../../context/ContextProvider"
+import { useInitContext } from "@src/context/ContextProvider"
 import { useNavigate } from "react-router"
 import { useDispatch, useSelector } from "react-redux"
-import { RootState } from "../../store/store"
+import { RootState } from "@src/store/store"
 
 export const useApp = () => {
 

@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux'
 import './UserListTitles.css'
-import { RootState } from '../../../../store/store'
+import { RootState } from '@src/store/store'
 import useSortUserList from '../../hooks/useSortUserList'
-import { useInitContext } from '../../../../context/ContextProvider'
+import { useInitContext } from '@src/context/ContextProvider'
 
 const UseListTitles = () => {
 

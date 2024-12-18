@@ -1,5 +1,5 @@
-import BurgerButtonModal from '../../../../shared/BurgerButtonModal/BurgerButtonModal'
-import LinkOfNameSite from '../../../../shared/LinkNameOfSite/LinkNameOfSite'
+import BurgerButtonModal from '@src/shared/BurgerButtonModal/BurgerButtonModal'
+import LinkOfNameSite from '@src/shared/LinkNameOfSite/LinkNameOfSite'
 import './headerModalMenu.css'
 
 const HeaderModalMenu = () => {

@@ -4,7 +4,7 @@ import App from './App.tsx'
 import { Provider } from 'react-redux'
 import store from '../store/store.ts'
 import { BrowserRouter } from 'react-router-dom'
-import ContextProvider from '../context/ContextProvider.tsx'
+import ContextProvider from '@src/context/ContextProvider.tsx'
 
 createRoot(document.getElementById('root')!).render(
     <BrowserRouter>

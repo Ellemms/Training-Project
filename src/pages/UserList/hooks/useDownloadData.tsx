@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { RootState } from '../../../store/store'
+import { RootState } from '@src/store/store'
 import UserListTitles_Class from '../classes/UserListTitles_Class'
 import { UserListData } from '../classes/UserListData'
 

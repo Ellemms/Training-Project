@@ -1,9 +1,9 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { MusicPlayerReducer, MusicPlayerRoot } from "../modules/MusicPlayer/reducers/MusicPlayer";
-import { ModalMenuReducer, ModalMenuRoot } from "../modules/ModalMenu/reducers/ModalMenu";
-import { AppReducer, AppRootState } from "../main/reducers/globalReducer";
-import { UserListReducer, UserListRoot } from "../pages/UserList/reducers/UserList";
-import { HeaderSearch, HeaderSearchRootState } from "../modules/HeaderContainer/reducers/headerSearch";
+import { AppReducer, AppRootState } from "@src/main/reducers/globalReducer";
+import { MusicPlayerReducer, MusicPlayerRoot } from "@src/modules/MusicPlayer/reducers/MusicPlayer";
+import { ModalMenuReducer, ModalMenuRoot } from "@src/modules/ModalMenu/reducers/ModalMenu";
+import { UserListReducer, UserListRoot } from "@src/pages/UserList/reducers/UserList";
+import { HeaderSearch, HeaderSearchRootState } from "@src/modules/HeaderContainer/reducers/headerSearch";
 
 /////
 const Reducers = combineReducers({

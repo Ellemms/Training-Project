@@ -1,5 +1,5 @@
-import BurgerButtonModal from '../../../../shared/BurgerButtonModal/BurgerButtonModal'
-import LinkNameOfSite from '../../../../shared/LinkNameOfSite/LinkNameOfSite'
+import BurgerButtonModal from '@src/shared/BurgerButtonModal/BurgerButtonModal'
+import LinkOfNameSite from '@src/shared/LinkNameOfSite/LinkNameOfSite'
 import './headerNameOfSite.css'
 
 const HeaderNameOfSite = () => {
@@ -7,7 +7,7 @@ const HeaderNameOfSite = () => {
     return (
         <div className='headerNameOfSiteContainer'>
             <BurgerButtonModal/>
-            <LinkNameOfSite/>
+            <LinkOfNameSite/>
         </div>
     )
 }

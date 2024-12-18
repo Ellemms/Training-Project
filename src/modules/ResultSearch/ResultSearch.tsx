@@ -1,6 +1,6 @@
 import './resultSearch.css'
 import useHeaderResultSearch from "./hooks/useResultSearch"
-import { useInitContext } from '../../context/ContextProvider'
+import { useInitContext } from '@src/context/ContextProvider'
 
 const HeaderResultSearch = () => {
 

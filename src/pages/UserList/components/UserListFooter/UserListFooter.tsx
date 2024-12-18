@@ -1,7 +1,7 @@
 import './UserListFooter.css'
 import useUserListFooter from '../../hooks/useUserListFooter'
 import useDownloadData from '../../hooks/useDownloadData'
-import { useInitContext } from '../../../../context/ContextProvider'
+import { useInitContext } from '@src/context/ContextProvider'
 
 const UserListFooter = () => {
 

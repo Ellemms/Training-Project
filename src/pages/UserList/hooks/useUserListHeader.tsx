@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
-import { useInitContext } from "../../../context/ContextProvider"
-import { RootState } from "../../../store/store"
+import { useInitContext } from "@src/context/ContextProvider"
+import { RootState } from "@src/store/store"
 import { ChangeEvent, useEffect } from "react"
 
 const useUserListHeader = () => {

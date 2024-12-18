@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
-import { RootState } from "../../../store/store"
 import { useEffect } from "react"
+import { RootState } from "@src/store/store"
 
 const useHeaderResultSearch = (searchInputRef: React.ForwardedRef<HTMLInputElement>) => {
 

@@ -1,7 +1,8 @@
-import { UserListData } from "../pages/UserList/classes/UserListData";
-import MenuList from "../modules/ModalMenu/classes/MenuListClass";
-import AudioPlayerClass from "../modules/MusicPlayer/classes/MusicPlayerClass";
-import UserListTitles_Class from "../pages/UserList/classes/UserListTitles_Class";
+import { UserListData } from "@src/pages/UserList/classes/UserListData";
+import MenuList from "@src/modules/ModalMenu/classes/MenuListClass";
+import AudioPlayerClass from "@src/modules/MusicPlayer/classes/MusicPlayerClass";
+import UserListTitles_Class from "@src/pages/UserList/classes/UserListTitles_Class";
+
 
 interface ClassesContextType {
     MenuListExemplar: MenuList;

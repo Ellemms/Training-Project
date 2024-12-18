@@ -4,7 +4,7 @@ import UserListHeader from "./components/UserListHeader/UserListHeader"
 import './UserList.css'
 import UserListFooter from "./components/UserListFooter/UserListFooter"
 import useDownloadData from './hooks/useDownloadData'
-import { useInitContext } from '../../context/ContextProvider'
+import { useInitContext } from '@src/context/ContextProvider'
 import { useEffect } from 'react'
 
 const UserListComponent = () => {

@@ -1,7 +1,7 @@
 import { ChangeEvent } from 'react'
 import { useDispatch } from 'react-redux'
 import './SearchComponent.css'
-import { useInitContext } from '../../../../context/ContextProvider'
+import { useInitContext } from '@src/context/ContextProvider'
 
 const SearchComponent = () => {
 

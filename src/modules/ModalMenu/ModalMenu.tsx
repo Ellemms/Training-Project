@@ -3,7 +3,7 @@ import ListOfMenu from './components/ListOfMenu/ListOfMenu'
 import Settings from './components/Settings/Settings'
 import MusicPlayer from '../MusicPlayer/MusicPlayer'
 import { useSelector } from 'react-redux'
-import { RootState } from '../../store/store'
+import { RootState } from '@src/store/store'
 import './modalMenu.css'
 
 const ModalMenu = () => {
