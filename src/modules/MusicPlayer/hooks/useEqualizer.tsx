@@ -1,8 +1,12 @@
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "@src/store/store"
 import { useEffect } from "react"
+import { useInitContext } from "@src/context/ContextProvider"
 
 const useEqualizer = () => {
+
+    /////Context
+    const contextValue = useInitContext()
 
     /////States
     const stateIsPlaying = useSelector((store: RootState) => store.musicPlayer.stateIsPlaying)
@@ -18,7 +22,7 @@ const useEqualizer = () => {
 
     /////
     useEffect(() => {
-        if (stateIsPlaying) {
+        if (stateIsPlaying && contextValue.refAudio.current && !contextValue.refAudio.current.paused) {
             const setHeightBar = setInterval (() => {
                 const newArrayHeightValues = stateHeightBar.map(() => {
                         return randomHeight()

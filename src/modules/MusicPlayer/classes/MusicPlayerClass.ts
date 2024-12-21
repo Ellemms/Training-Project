@@ -2,9 +2,9 @@ import AudioInterface from "../interfaces/MusicPlayerInterface"
 
 class AudioPlayerClass<S> {
     private readonly _audioSrcArray: Array<AudioInterface<string>> = [
-        {audioTitle: 'Jim Yosef & Laura Brehm — Into the Sky', audioSrc: '/public/music/Jim\ Yosef\ &\ Laura\ Brehm\ —\ Into\ the\ Sky.mp3'},
-        {audioTitle: 'Jim Yosef & RIELL — Animal', audioSrc: '/public/music/Jim Yosef & RIELL — Animal.mp3'},
-        {audioTitle: 'Jim Yosef & RIELL — Hate You', audioSrc: '/public/music/Jim Yosef & RIELL — Hate You.mp3'},
+        {audioTitle: 'Jim Yosef & Laura Brehm — Into the Sky', audioSrc: '/music/Jim Yosef & Laura Brehm — Into the Sky.mp3'},
+        {audioTitle: 'Jim Yosef & RIELL — Animal', audioSrc: '/music/Jim Yosef & RIELL — Animal.mp3'},
+        {audioTitle: 'Jim Yosef & RIELL — Hate You', audioSrc: '/music/Jim Yosef & RIELL — Hate You.mp3'},
     ]
 
     public get getFirstTrack(): AudioInterface<string> {

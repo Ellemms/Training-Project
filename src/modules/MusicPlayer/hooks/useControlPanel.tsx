@@ -17,27 +17,38 @@ const useControlPanel = () => {
     const dispatch = useDispatch()
 
     /////Fcs
-    const playAndPause = () => {
-        !stateIsPlaying ? contextValue.refAudio.current?.play() : contextValue.refAudio.current?.pause()
-        dispatch({type: 'setStateIsPlaying', payload: stateIsPlaying ? false : true})
+    const playAndPause = async () => {
+        try {
+            contextValue.refAudio.current && !contextValue.refAudio.current.paused 
+                ? (contextValue.refAudio.current?.pause(),
+                dispatch({type: 'setStateIsPlaying', payload: false}))
+                : (await contextValue.refAudio.current?.play(),
+                dispatch({type: 'setStateIsPlaying', payload: true}))
+        } catch {
+            dispatch({type: 'setStateIsPlaying', payload: false})
+        }
     }
 
-    const changeTrack = (argTrack: AudioInterface<string>) => {
-        contextValue.refAudio.current?.pause()
-        dispatch({type: 'setStateIsPlaying', payload: false})
-
-        const trackObject = argTrack
-        dispatch({type: 'setStateTitleTrack', payload: trackObject.audioTitle})
-        dispatch({type: 'setStateSrcTrack', payload: trackObject.audioSrc})
-
-        const newArrayHeightValues = stateHeightBar.map(() => 1)
-        dispatch({type: 'setStateHeightBar', payload: newArrayHeightValues})
-
-        contextValue.refAudio.current?.load()
-        setTimeout(() => {
-            contextValue.refAudio.current?.play()
-            dispatch({type: 'setStateIsPlaying', payload: true})
-        }, 500)
+    const changeTrack = async (argTrack: AudioInterface<string>) => {
+        try {
+            contextValue.refAudio.current?.pause()
+            dispatch({type: 'setStateIsPlaying', payload: false})
+    
+            const trackObject = argTrack
+            dispatch({type: 'setStateTitleTrack', payload: trackObject.audioTitle})
+            dispatch({type: 'setStateSrcTrack', payload: trackObject.audioSrc})
+    
+            const newArrayHeightValues = stateHeightBar.map(() => 1)
+            dispatch({type: 'setStateHeightBar', payload: newArrayHeightValues})
+    
+            contextValue.refAudio.current?.load()
+            setTimeout(async () => {
+                await contextValue.refAudio.current?.play()
+                dispatch({type: 'setStateIsPlaying', payload: true})
+            }, 500)
+        } catch {
+            dispatch({type: 'setStateIsPlaying', payload: false})
+        }
     }
 
     return { contextValue, stateTitleTrack, stateIsPlaying, changeTrack, playAndPause }

@@ -11,7 +11,7 @@ const initialState = {
     UserListSearchValue: '',
 }
 
-export const UserListReducer = (state = initialState, action: any) => {
+export const UserListReducer = (state: UserListRoot = initialState, action: any) => {
     switch (action.type) {
         case 'setUserListArray':
             return {...state, UserListArray: action.payload};
