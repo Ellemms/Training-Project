@@ -10,7 +10,7 @@ export const useApp = () => {
     const contextValue = useInitContext()
     /////Router
     const navigate = useNavigate()
-        /////States
+    /////States
     const nameActivePage = useSelector((store: RootState) => store.app.nameActivePage)
     /////Dispatch
     const dispatch = useDispatch()
