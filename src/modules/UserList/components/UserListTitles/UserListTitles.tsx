@@ -3,6 +3,7 @@ import './UserListTitles.css'
 import { RootState } from '@src/store/store'
 import useSortUserList from '../../hooks/useSortUserList'
 import { useInitContext } from '@src/context/ContextProvider'
+import UserListTitles_Interface from '../../interfaces/UserListTitles_Interface'
 
 const UseListTitles = () => {
 
@@ -15,7 +16,7 @@ const UseListTitles = () => {
    
    return (
       <div className="UserListTitles">
-         {UserListTitleArray.map((el) => {
+         {UserListTitleArray.map((el: UserListTitles_Interface<string>) => {
             return <p className={el.className}
                       id={el.id}
                       onClick={(e) => SortUserList(e)}

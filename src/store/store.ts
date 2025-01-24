@@ -2,7 +2,7 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { AppReducer, AppRootState } from "@src/main/reducers/globalReducer";
 import { MusicPlayerReducer, MusicPlayerRoot } from "@src/modules/MusicPlayer/reducers/MusicPlayer";
 import { ModalMenuReducer, ModalMenuRoot } from "@src/modules/ModalMenu/reducers/ModalMenu";
-import { UserListReducer, UserListRoot } from "@src/pages/UserList/reducers/UserList";
+import { UserListReducer, UserListRoot } from "@src/modules/UserList/reducers/UserList";
 import { HeaderSearch, HeaderSearchRootState } from "@src/modules/HeaderContainer/reducers/headerSearch";
 
 /////

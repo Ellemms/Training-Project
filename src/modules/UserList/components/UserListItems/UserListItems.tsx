@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux'
 import { RootState } from '@src/store/store'
 import './UserListItems.css'
+import UserListInterface from '../../interfaces/UserList_Interface'
 
 const UserListItems = () => {
 
@@ -9,7 +10,7 @@ const UserListItems = () => {
 
     return (
         <ul className="UserListItems_Ul">
-            {UserListArray.map((el) => {
+            {UserListArray.map((el: UserListInterface<string, number>) => {
                 return  <li className='UserListItems_Li' key={el.id}>
                             <div className='UserListItemsLi_Name'>
                                 <span className='UserListItems_Avatar'>
