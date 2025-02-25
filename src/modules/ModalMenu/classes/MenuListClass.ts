@@ -4,7 +4,7 @@ class MenuList {
     private _CategoriesMenu: MenuListInterface<string, boolean> [] = [
         {nameCategory: 'Contact list', nameSubCategory: ['Contact list (deleted)'], visible: true},
         {nameCategory: 'User list', nameSubCategory: ['User list'], visible: true},
-        {nameCategory: 'Category 3', nameSubCategory: ['Empty'], visible: true},
+        {nameCategory: 'Category 3', nameSubCategory: ['Weather'], visible: true},
         {nameCategory: 'Category 4', nameSubCategory: ['Empty'], visible: true},
         {nameCategory: 'Category 5', nameSubCategory: ['Empty'], visible: true},
         {nameCategory: 'Category 6', nameSubCategory: ['Empty'], visible: true},

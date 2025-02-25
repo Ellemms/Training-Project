@@ -7,6 +7,7 @@ import './app.css'
 import useAppTheme from './hooks/useAppTheme'
 import { Route, Routes } from 'react-router-dom'
 import { useApp } from './hooks/useApp'
+import { WeatherApp } from '@src/modules/WeatherApp/WeatherApp'
 
 function App() {
 
@@ -19,7 +20,8 @@ function App() {
       <HeaderContainer/>
       <Routes>
         <Route path='' element={null}/>
-        <Route path='/User List' element={<UserListComponent/>}></Route>
+        <Route path='/User List' element={<UserListComponent/>}/>
+        <Route path='Weather' element={<WeatherApp/>}/>
       </Routes>
       <HeaderResultSearch/>
       <LayerBg/>
