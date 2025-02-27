@@ -1,19 +1,11 @@
-interface ForecastDateInt<S, N> {
-    list: Array<{
-        dt: N;
-        main: {
-            temp: N | 'Temp';
-        };
-        weather: Array<{
-            icon: S;
-        }>;
-        other: {
-            minutes: S,
-            hours: S,
-            day: S,
-            month: S,
-        }
-    }>;
-}
+type ForecastDateInt<S, N> = Array<{
+                                currentCityName: S,
+                                oldCityName: S,
+                                currentTemp: N,
+                                oldTemp: N,
+                                weatherIcon: S;
+                                time: S;
+                                date: S;
+                             }>;
 
 export type { ForecastDateInt }

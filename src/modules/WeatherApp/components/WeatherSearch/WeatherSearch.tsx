@@ -8,7 +8,10 @@ const WeatherSearch = () => {
     return (
         <WeatherSearchContainer>
             <WeatherSearchButton onClick={() => GetNewData()}/>
-            <WeatherSearchinput placeholder="City name" value={InputValue} onChange={(e) => SetInputValue(e.currentTarget.value)}/>
+            <WeatherSearchinput placeholder="City name"
+                                value={InputValue}
+                                onChange={(e) => SetInputValue(e.currentTarget.value)}
+                                onKeyUp={(e) => {e.key === 'Enter' ? GetNewData() : null}}/>
         </WeatherSearchContainer>
     )
 }

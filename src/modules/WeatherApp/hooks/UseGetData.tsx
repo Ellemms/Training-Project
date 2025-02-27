@@ -5,7 +5,14 @@ import { WeatherForecastAdapter } from "../adapters/WeatherForecastAdapter"
 
 const UseGetData = () => {
 
-    const { InputValue, WeatherCurrentData, WeatherForecastData, SetInputValue, SetCurrentData, SetForecastData } = UseWeatherStore()
+    const { InputValue,
+            ForecastSwitch,
+            WeatherCurrentData,
+            WeatherForecastData,
+            SetInputValue,
+            SetForecastSwitch,
+            SetCurrentData,
+            SetForecastData } = UseWeatherStore()
 
     const GetNewData = (arg: string = InputValue) => {
       if (arg !== '') {
@@ -17,20 +24,22 @@ const UseGetData = () => {
                       .then((currentData) => {
                         SetCurrentData(WeatherCurrentAdapter(geo, currentData))
                       })
-                      .catch((error) => console.log(error))
+                      .catch((error) => console.error('Ошибка при получении данных о текущей погоде:', error.response?.data || error.message))
 
                 axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${geo.data[0].lat}&lon=${geo.data[0].lon}&appid=${APIkey}`)
                       .then((forecastData) => {
-                        SetForecastData(WeatherForecastAdapter(forecastData))
+                        SetForecastData(WeatherForecastAdapter(geo, forecastData, WeatherForecastData))
                       })
-                      .catch((error) => console.error(error))
+                      .catch((error) => console.error('Ошибка при получении данных о прогнозе погоды:', error.response?.data || error.message))
                       
               })
-              .catch(() => console.error('Вы ввели невалидные данные!'))
+              .catch((error) => {
+                console.error('Ошибка при получении геолокации:', error.response?.data || error.message)
+              })
       }
     }
 
-    return { InputValue, WeatherCurrentData, WeatherForecastData, SetInputValue, GetNewData }
+    return { InputValue, ForecastSwitch, WeatherCurrentData, WeatherForecastData, SetInputValue, SetForecastSwitch, GetNewData }
 }
 
 export { UseGetData }

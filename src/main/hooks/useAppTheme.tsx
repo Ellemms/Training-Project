@@ -44,6 +44,9 @@ const useAppTheme = () => {
         document.documentElement.style.setProperty('--us-li-avatar-color', colorStyle === 'dark' ? '#333' : '#fff')
         document.documentElement.style.setProperty('--us-li-titles-hover', colorStyle === 'dark' ? 'rgba(255, 255, 255, 0.15)' : 'rgba(33, 33, 33, 0.15)')
         document.documentElement.style.setProperty('--us-li-titles-triangle', colorStyle === 'dark' ? '#fff' : '#333')
+        ///WeatherForecast
+        document.documentElement.style.setProperty('--weather-switch-btn-active', colorStyle === 'dark' ? 'rgba(255, 255, 255, 0.25)' : 'rgba(33, 33, 33, 0.25)')
+        document.documentElement.style.setProperty('--weather-switch-btn-notActive', colorStyle === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(33, 33, 33, 0.05)')
 
     }, [colorStyle])
 

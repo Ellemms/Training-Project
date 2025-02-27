@@ -4,15 +4,18 @@ import { ForecastDateInt } from "../interfaces/ForecastDateInt";
 
 interface WeatherStore<S, N> {
     InputValue: S,
+    ForecastSwitch: S,
     WeatherCurrentData: CurrentDataInt<S,N>,
     WeatherForecastData: ForecastDateInt<S, N>,
     SetInputValue: (arg: S) => void,
+    SetForecastSwitch: ( arg: S) => void,
     SetCurrentData: (arg: CurrentDataInt<S, N>) => void,
     SetForecastData: (arg: ForecastDateInt<S, N>) => void
 }
 
 const UseWeatherStore = create<WeatherStore<string ,number>>((set) => ({
     InputValue: '',
+    ForecastSwitch: 'Cards',
 
     WeatherCurrentData: {
         name: 'Name city',
@@ -34,21 +37,17 @@ const UseWeatherStore = create<WeatherStore<string ,number>>((set) => ({
         ]
     },
     
-    WeatherForecastData: {
-        list: Array(40).fill({
-            dt: 0,
-            main: { temp: '25°C' },
-            weather: [{ icon: '02d' }],
-            other: {
-                minutes: '00',
-                hours: '00',
-                day: '01',
-                month: '01',
-            },
-        }),
-
-    },
+    WeatherForecastData: Array(40).fill({
+        currentCityName: '',
+        oldCityName: '',
+        currentTemp: 0,
+        oldTemp: 0,
+        weatherIcon: '02d',
+        time: '01:00',
+        date: '01.05',
+    }),
     SetInputValue: (arg) => set(() => ({InputValue: arg})),
+    SetForecastSwitch: (arg) => set(() => ({ForecastSwitch: arg})),
     SetCurrentData: (arg) => set(() => ({WeatherCurrentData: arg})),
     SetForecastData: (arg) => set(() => ({WeatherForecastData: arg}))
 }))
