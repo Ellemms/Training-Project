@@ -20,8 +20,8 @@ function App() {
       <HeaderContainer/>
       <Routes>
         <Route path='' element={null}/>
-        <Route path='/User List' element={<UserListComponent/>}/>
-        <Route path='Weather' element={<WeatherApp/>}/>
+        <Route path='/User list' element={<UserListComponent/>}/>
+        <Route path='/Weather app' element={<WeatherApp/>}/>
       </Routes>
       <HeaderResultSearch/>
       <LayerBg/>

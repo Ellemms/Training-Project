@@ -14,15 +14,14 @@ const ModalMenu = () => {
     const modalMenuClass = stateVisibleMenu ? 'modalMenu_Show' : 'modalMenu_Hide'
 
     return (
-            <div className={modalMenuClass}>
-                <HeaderModalMenu/>
-                <div className='menuScrollbarContainer'>
-                    <ListOfMenu/>
-                    <Settings/>
-                </div>
-                <MusicPlayer/>
+        <div className={modalMenuClass}>
+            <HeaderModalMenu/>
+            <div className='menuScrollbarContainer'>
+                <ListOfMenu/>
+                <Settings/>
             </div>
-        
+            <MusicPlayer/>
+        </div>
     )
 }
 

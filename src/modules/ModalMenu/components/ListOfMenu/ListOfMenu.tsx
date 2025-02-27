@@ -21,7 +21,7 @@ const ListOfMenu = () => {
                                         return <li key={i} className='itemListOfSection' onClick={() => {changeThePage(el)}}>{el}</li>
                                     })}
                                 </ul>
-                           </div>    
+                           </div>
                 })}
             </div>
         </div>

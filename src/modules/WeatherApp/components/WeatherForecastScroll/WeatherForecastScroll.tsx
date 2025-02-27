@@ -14,7 +14,7 @@ const WeatherForecastScroll = () => {
         <WeatherForecastScrollView>
             {WeatherForecastData.map((e, i) => {
                 return <WeatherForecastStep key={i}>
-                            <WeatherForecastDate>{e.date + '°C'}</WeatherForecastDate>
+                            <WeatherForecastDate>{e.date}</WeatherForecastDate>
                             <WeatherForecastHours>{e.time}</WeatherForecastHours>
                             <WeatherForecastImg src={`http://openweathermap.org/img/wn/${e.weatherIcon}@2x.png`}></WeatherForecastImg>
                             <WeatherForecastTemp>{e.currentTemp}</WeatherForecastTemp>
