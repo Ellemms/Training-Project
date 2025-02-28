@@ -4,7 +4,11 @@
 
 2 - run the command "npm install" in terminal your IDE;
 
-3 - run the command "npm run dev" and follow the link in your IDE's terminal;
+3 - add your api key to the .env file ( in use https://openweathermap.org );
+
+4 - run the command "npm run dev";
+
+5 - follow the link in your IDE's terminal;
 
 ## React + TypeScript + Vite
 
