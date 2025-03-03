@@ -7,8 +7,8 @@ const WeatherCity = () => {
 
     return (
         <WeatherCityContainer>
-            <CityName>{WeatherCurrentData.name + ', ' + WeatherCurrentData.sys.country}</CityName>
-            <CurrentDate>{WeatherCurrentData.date.dayOfWeek + ', ' + WeatherCurrentData.date.day + ' ' + WeatherCurrentData.date.month}</CurrentDate>
+            <CityName>{WeatherCurrentData.name + ', ' + WeatherCurrentData.country}</CityName>
+            <CurrentDate>{WeatherCurrentData.dayOfWeek + ', ' + WeatherCurrentData.day + ' ' + WeatherCurrentData.month}</CurrentDate>
         </WeatherCityContainer>
     )
 }

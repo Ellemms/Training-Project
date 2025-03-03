@@ -4,11 +4,11 @@ import { CustomTooltip } from './RechartsTooltip';
 
 const WeatherRecharts = () => {
 
-    const { WeatherForecastData } = UseGetData()
+    const { FilteredSwitch, WeatherForecastData, WeatherFilteredData } = UseGetData()
 
     return (
         <ResponsiveContainer width="100%" height="75%">
-            <AreaChart data={WeatherForecastData}
+            <AreaChart data={FilteredSwitch === 'Hours' ? WeatherForecastData : WeatherFilteredData}
                     margin={{ top: 30, right: 30, left: 0, bottom: 0 }}>
                 <defs>
                     <linearGradient id="bgCurrentTemp" x1="0" y1="0" x2="0" y2="1">
@@ -22,7 +22,7 @@ const WeatherRecharts = () => {
                 </defs>
                 <XAxis dataKey="date" tick={{fill: 'var(--text-color)'}}/>
                 <YAxis tick={{fill: 'var(--text-color)'}}/>
-                <Tooltip content={<CustomTooltip/>}/>
+                <Tooltip content={<CustomTooltip />}/>
                 <Area type="monotone" dataKey='currentTemp' stroke="#8884d8" fillOpacity={1} fill="url(#bgCurrentTemp)" />
                 <Area type="monotone" dataKey='oldTemp' stroke="#82ca9d" fillOpacity={1} fill="url(#bgOldTemp)" />
             </AreaChart>

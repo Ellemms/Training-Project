@@ -8,8 +8,8 @@ const WeatherCurrentData = () => {
     return (
         <CurrentDataContainer>
             <TempCloudsContainer>
-                <Temperature>{WeatherCurrentData.temp.temp}</Temperature>
-                <CloudCover>{WeatherCurrentData.weather[0].description}</CloudCover>
+                <Temperature>{WeatherCurrentData.temp}</Temperature>
+                <CloudCover>{WeatherCurrentData.weatherDescription}</CloudCover>
             </TempCloudsContainer>
             <OtherDataContainer>
                 {WeatherCurrentData.otherData.map((e, i) => {

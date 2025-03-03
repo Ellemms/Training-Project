@@ -14,7 +14,7 @@ const WeatherForecastName = styled.p`
 `;
 
 const WeatherForecastSwitch = styled.div`
-    width: 250px;
+    width: 500px;
     height: 100%;
     display: flex;
     justify-content: space-evenly;
